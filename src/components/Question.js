@@ -16,11 +16,10 @@ class Question extends Component {
         this.setState({
         	choosen_answer: event.target.value,
         	cka: event.target.value === "a"? "a": "",
-  			ckb: event.target.value === "b"? "b": "",
-  			ckc: event.target.value === "c"? "c": "",
-  			ckd: event.target.value === "d"? "d": ""
+    			ckb: event.target.value === "b"? "b": "",
+    			ckc: event.target.value === "c"? "c": "",
+    			ckd: event.target.value === "d"? "d": ""
         })
-        console.log([event.target.name])
 
     }
 
@@ -32,7 +31,6 @@ class Question extends Component {
   			ckc: "",
   			ckd: ""
     	})
-    	// console.log('abc')
     }
 
     
@@ -65,7 +63,7 @@ class Question extends Component {
 					    	{this.props.choice_b}
 					  	</label>
 					</div>
-					{this.props.choice_c !== "null"? 
+					{this.props.choice_c !== undefined? 
 						<div className="form-check">
 							
 						  	<label className="form-check-label" htmlFor="exampleRadios1">
@@ -75,7 +73,7 @@ class Question extends Component {
 						  	</label>
 						</div>
 					: ""}
-					{this.props.choice_d !== "null"? 
+					{this.props.choice_d !== undefined? 
 						<div className="form-check">
 							
 						  	<label className="form-check-label" htmlFor="exampleRadios1">
